@@ -395,7 +395,7 @@ h6 {
 #hero {
   width: 100%;
   height: 80vh;
-  background: linear-gradient(#000000df, #868686df), url("../img/hero.jpg") fixed center center;
+  background: linear-gradient(#000000df, #156e98b0), url("../img/hero.jpg") fixed center center;
   background-size: cover;
 }
 
@@ -1118,11 +1118,14 @@ section {
 
 .team .member .pic {
   overflow: hidden;
-  width: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
 
 .team .member .pic img {
+  width: 100%;
+  height: 100%;
   transition: ease-in-out 0.3s;
 }
 
@@ -1820,7 +1823,64 @@ section {
   transition: 0.3s;
 }
 
-@media (max-width: 768px) {
+.producto {
+  padding-top: 120px;
+  text-align: left;
+}
+
+.producto .section-title{
+  text-align: left;
+}
+
+.producto .section-title h2::before {
+  width: 30%;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  left: 5%;
+  right: 0;
+  bottom: 1px;
+  /* left: calc(50% - 60px); */
+}
+
+.producto .section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #47b2e4;
+  left: 10%;
+  bottom: 0;
+}
+
+.producto  a{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+  height: 45px;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  background-color:  #47b2e4;
+  margin-top: 60px;
+  cursor: pointer;
+  color: #000;
+}
+
+.producto  a:hover{
+  transform: scale(0.9);
+}
+
+.producto img {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
   #footer .footer-bottom {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -1835,4 +1895,68 @@ section {
   #footer .credits {
     padding-top: 4px;
   }
+
+  .producto .section-title h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+  }
+  
+  .producto .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #47b2e4;
+    bottom: 0;
+    left: calc(50% - 20px);
+  }
+
+  .producto .section-title{
+    text-align: center;
+  }
+
+  .producto  a{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    height: 45px;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    background-color:  #47b2e4;
+    cursor: pointer;
+    color: #000;
+    margin: 30px auto;
+  }
+
+  .producto img {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+
+  .team .member .pic {
+    overflow: hidden;
+    width: 220px;
+    height: 120px;
+    border-radius: 50%;
+  }
+  
+
+  .contact .info {
+    display: block;
+  }
+
+  .imgLogo{
+    width: 30%;
+  }
 }
+
